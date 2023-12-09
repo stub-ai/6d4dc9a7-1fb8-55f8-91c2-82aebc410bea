@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Initium",
+  "version": "11",
+  "description": "?",
+  "permissions": [
+    "tabs",
+    "storage",
+    "activeTab",
+    "*://*.core.learn.edgenuity.com/*",
+    "*://student.edgenuity.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.core.learn.edgenuity.com/*",
+        "*://student.edgenuity.com/*"
+      ],
+      "js": ["userscript.js"]
+    }
+  ]
+}
